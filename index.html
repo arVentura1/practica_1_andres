@@ -7,39 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abstract</title>
     <link rel="stylesheet" href="./tools/style.css">
-    <!-- don't forget to add an icon photo-->
+    <link rel=icon href="https://cdn.jsdelivr.net/npm/simple-icons@7.12.0/icons/blender.svg">
+
 </head>
 
 <body>
 
-    <div class="layout">
-        <header>
-            <div class="headerContainer">
-                <div class="headerMark">
-                    <div class="headerLogo">
-                        <box-icon type='solid' name='cube-alt'></box-icon>
-                        Abstract
-                    </div>
-                    <span class="pipeline">|</span>
-                    <div class="headerHelper">
-                        <a href="#">Help Center</a>
-                    </div>
+    <header>
+        <div class="headerContainer">
+            <div class="headerMark">
+                <div class="headerLogo">
+                    <box-icon name='blender' type='logo' color="white" size="md"></box-icon>
+                    Abstract
                 </div>
-                <div class="headerButtons">
-                    <button type="button" class="searchButton">
-                        <box-icon name='search'></box-icon>
-                    </button>
-                    <button type="button" class="hamburgerButton">
-                        <box-icon name='menu'></box-icon>
-                    </button>
+                <span class="pipeline">|</span>
+                <div class="headerHelper">
+                    <a href="#">Help Center</a>
                 </div>
             </div>
-        </header>
+            <div class="headerButtons">
+                <button type="button" class="searchButton">
+                    <box-icon name='search' color="white" size="md"></box-icon>
+                </button>
+                <button type="button" class="hamburgerButton">
+                    <box-icon name='menu' color="white" size="md"></box-icon>
+                </button>
+            </div>
+        </div>
+    </header>
 
-        <!-- -->
-        <main></main>
-        <footer></footer>
-    </div>
+    <main>
+
+        <section>
+            <form class="sectionContainer">
+                <div class="text">
+                    How can we help?
+                </div>
+                <div class="helpSearchBox">
+                    <input type="search" class="searchBox" placeholder="Search">
+                    <button type="button" class="helpSearchButton">
+                        <box-icon name='right-arrow-alt' size="md"></box-icon>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <div>
+
+        </div>
+
+    </main>
+    <footer></footer>
 
 </body>
 

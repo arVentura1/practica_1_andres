@@ -1,6 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display:ital@0;1&display=swap");
-.layout {
-  max-width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+
+header {
+  color: #fff;
+  background-color: #000000;
 }
 
 .headerContainer {
@@ -15,10 +21,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 4.5%;
+  font-size: 22px;
 }
 
-.headerLogo,
-.headerMark {
+.headerMark,
+.headerLogo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,9 +35,19 @@
           align-items: center;
 }
 
+.headerMark .headerLogo,
+.headerLogo .headerLogo {
+  font-weight: bolder;
+}
+
 .pipeline {
   margin-left: 5px;
   margin-right: 5px;
+  font-size: larger;
+}
+
+.headerHelper {
+  font-size: 18px;
 }
 
 .headerHelper a {
@@ -37,8 +55,27 @@
   text-decoration: none;
 }
 
+.headerButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .searchButton,
 .hamburgerButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: none;
   color: inherit;
   border: none;
@@ -46,5 +83,69 @@
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+.sectionContainer {
+  background-color: #dadbf1;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text {
+  text-align: center;
+  padding: 5%;
+  font-size: 24px;
+}
+
+.helpSearchBox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 106%;
+}
+
+.searchBox {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-color: #000000;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-width: 0.1px;
+  border-radius: 3px;
+  padding: 3%;
+}
+
+.helpSearchButton {
+  background: none;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: relative;
+  right: 2.5em;
+  top: 2.5px;
+}
+
+@media only screen and (min-width: 500px) {
+  .text {
+    font-size: 48px;
+  }
+  .searchBox {
+    font-size: 22px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
