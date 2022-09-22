@@ -1,2 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display:ital@0;1&display=swap");
+.layout {
+  max-width: 100%;
+}
+
+.headerContainer {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headerLogo,
+.headerMark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pipeline {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.headerHelper a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.searchButton,
+.hamburgerButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 /*# sourceMappingURL=style.css.map */

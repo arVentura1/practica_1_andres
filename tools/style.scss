@@ -1,7 +1,52 @@
-//paleta de colores
-$color1: #000000;
-$color2: #4C5FD5;
-$color3: #dadbf1;
-$color4: #fff;
-//fuentes (DM Sans regular y DM Serif Display regular e italic)
+//Color palette
+$lightBlue: #4C5FD5;
+$lightGrey: #dadbf1;
+$white: #fff;
+$black: #000000;
+//Fonts (DM Sans regular & DM Serif Display regular e italic)
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display:ital@0;1&display=swap');
+//Mobile First
+.layout {
+    max-width: 100%;
+}
+
+.headerContainer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerLogo,
+.headerMark {
+    display: flex;
+    align-items: center;
+}
+
+.pipeline {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.headerHelper a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.searchButton,
+.hamburgerButton {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+//Media Queries
+//Tablet (?
+@media only screen and (min-width:768px) {}
+
+//Desktop
+@media only screen and (min-width: 1200px) {}
