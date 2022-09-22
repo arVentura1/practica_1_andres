@@ -87,6 +87,10 @@ header {
 
 .sectionContainer {
   background-color: #dadbf1;
+  height: 30vh;
+}
+
+.innerSectionContainer {
   padding: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,12 +114,12 @@ header {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 104%;
+  width: 103%;
 }
 
 .searchBox {
   width: 100%;
-  margin-left: auto;
+  margin-left: 20px;
   margin-right: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -140,12 +144,77 @@ header {
   top: 2.5px;
 }
 
+.categoriesContainer {
+  max-width: 100%;
+  margin-top: 5%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.category {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.categoryPhoto {
+  margin-top: 20%;
+}
+
+.categoryPhoto img {
+  width: 75%;
+}
+
+.categoryDescription {
+  font-size: 24px;
+  padding: 5%;
+}
+
+.categoryDescription .content {
+  margin-bottom: 24px;
+  line-height: 32px;
+}
+
+.categoryDescription a {
+  font-size: 20px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #4C5FD5;
+}
+
 @media only screen and (min-width: 500px) {
   .text {
     font-size: 48px;
   }
   .searchBox {
     font-size: 22px;
+  }
+  .helpSearchBox {
+    width: 105%;
+  }
+  .sectionContainer {
+    height: 55vh;
+  }
+  .categoryPhoto {
+    margin-top: 10%;
+  }
+  .categoryPhoto img {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */

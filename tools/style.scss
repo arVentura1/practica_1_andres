@@ -68,8 +68,13 @@ header {
 }
 
 //main
+//section
 .sectionContainer {
     background-color: $lightGrey;
+    height: 30vh;
+}
+
+.innerSectionContainer {
     padding: 5%;
     display: flex;
     flex-direction: column;
@@ -84,12 +89,12 @@ header {
 
 .helpSearchBox {
     display: inline-flex;
-    width: 104%;
+    width: 103%;
 }
 
 .searchBox {
     width: 100%;
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: auto;
     box-sizing: border-box;
     border-color: $black;
@@ -112,13 +117,66 @@ header {
     top: 2.5px;
 }
 
-//bigger text for bigger mobile devices
+//categoriesContainer
+.categoriesContainer {
+    max-width: 100%;
+    margin-top: 5%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.categoryPhoto {
+    margin-top: 20%;
+    & img {
+        width: 75%;
+    }
+}
+
+.categoryDescription {
+    font-size: 24px;
+    padding: 5%;
+    & .content {
+        margin-bottom: 24px;
+        line-height: 32px;
+    }
+    & a {
+        font-size: 20px;
+        line-height: 28px;
+        text-decoration: none;
+        color: $lightBlue;
+    }
+}
+
+//bigger text and more stuff for bigger mobile devices
 @media only screen and (min-width:500px) {
     .text {
         font-size: 48px;
     }
     .searchBox {
         font-size: 22px;
+    }
+    .helpSearchBox {
+        width: 105%;
+    }
+    .sectionContainer {
+        height: 55vh;
+    }
+    .categoryPhoto {
+        margin-top: 10%;
+        & img {
+            width: 70%;
+        }
     }
 }
 
