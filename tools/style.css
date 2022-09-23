@@ -25,8 +25,7 @@ header {
   font-size: 22px;
 }
 
-.headerMark,
-.headerLogo {
+.headerMark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,9 +34,20 @@ header {
           align-items: center;
 }
 
-.headerMark .headerLogo,
-.headerLogo .headerLogo {
+.headerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: bolder;
+}
+
+.headerLogo img {
+  width: 31px;
+  height: 31px;
+  margin-right: 10px;
 }
 
 .pipeline {
@@ -48,6 +58,7 @@ header {
 
 .headerHelper {
   font-size: 18px;
+  font-weight: 400;
 }
 
 .headerHelper a {
@@ -174,10 +185,12 @@ header {
 
 .categoryPhoto {
   margin-top: 20%;
+  vertical-align: middle;
 }
 
 .categoryPhoto img {
-  width: 75%;
+  width: 60px;
+  height: 60px;
 }
 
 .categoryDescription {
@@ -208,13 +221,15 @@ header {
     width: 105%;
   }
   .sectionContainer {
-    height: 55vh;
+    height: 50vh;
   }
   .categoryPhoto {
     margin-top: 10%;
+    vertical-align: middle;
   }
   .categoryPhoto img {
-    width: 70%;
+    width: 60px;
+    height: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */

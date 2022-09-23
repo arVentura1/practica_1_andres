@@ -25,12 +25,19 @@ header {
     font-size: 22px;
 }
 
-.headerMark,
+.headerMark {
+    display: flex;
+    align-items: center;
+}
+
 .headerLogo {
     display: flex;
     align-items: center;
-    .headerLogo {
-        font-weight: bolder;
+    font-weight: bolder;
+    & img {
+        width: 31px;
+        height: 31px;
+        margin-right: 10px;
     }
 }
 
@@ -42,6 +49,7 @@ header {
 
 .headerHelper {
     font-size: 18px;
+    font-weight: 400;
     & a {
         color: inherit;
         text-decoration: none;
@@ -138,9 +146,12 @@ header {
 
 .categoryPhoto {
     margin-top: 20%;
-    & img {
-        width: 75%;
-    }
+    vertical-align: middle;
+}
+
+.categoryPhoto img {
+    width: 60px;
+    height: 60px;
 }
 
 .categoryDescription {
@@ -170,13 +181,15 @@ header {
         width: 105%;
     }
     .sectionContainer {
-        height: 55vh;
+        height: 50vh;
     }
     .categoryPhoto {
         margin-top: 10%;
-        & img {
-            width: 70%;
-        }
+        vertical-align: middle;
+    }
+    .categoryPhoto img {
+        width: 60px;
+        height: 60px;
     }
 }
 
