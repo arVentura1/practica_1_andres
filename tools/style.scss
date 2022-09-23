@@ -9,6 +9,10 @@ $black: #000000;
 body {
     font-family: 'DM Sans', sans-serif;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;
 }
 
 header {
@@ -79,7 +83,7 @@ header {
 //section
 .sectionContainer {
     background-color: $lightGrey;
-    height: 30vh;
+    height: 30%;
 }
 
 .innerSectionContainer {
@@ -129,17 +133,20 @@ header {
 .categoriesContainer {
     max-width: 100%;
     margin-top: 5%;
+    margin-bottom: 10%;
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .categories {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .category {
     max-width: 100%;
+    margin-left: 2.5%;
     display: flex;
     flex-direction: row;
 }
@@ -169,6 +176,54 @@ header {
     }
 }
 
+//footer
+footer {
+    max-width: 100%;
+    padding: 1%;
+    color: $white;
+    background-color: $black;
+    & a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.footerContainer {
+    font-weight: 400;
+    margin-top: 5%;
+    padding-bottom: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.footerCol {
+    width: 50%;
+    font-weight: 250;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1 1 160px;
+    & strong {
+        margin-top: 10%;
+    }
+}
+
+.footerLegalCol {
+    margin-top: 50px;
+    font-weight: 600;
+    line-height: 8px;
+}
+
+.footerLegalCol img {
+    width: 35px;
+    height: 35px;
+}
+
 //bigger text and more stuff for bigger mobile devices
 @media only screen and (min-width:500px) {
     .text {
@@ -181,7 +236,12 @@ header {
         width: 105%;
     }
     .sectionContainer {
-        height: 50vh;
+        height: 50%;
+    }
+    .category {
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 3%;
     }
     .categoryPhoto {
         margin-top: 10%;
@@ -195,7 +255,39 @@ header {
 
 //Media Queries
 //Tablet (?
-@media only screen and (min-width:768px) {}
+@media only screen and (min-width:768px) {
+    .text {
+        font-size: 64px;
+    }
+    .searchBox {
+        font-size: 28px;
+    }
+    .helpSearchBox {
+        width: 102%;
+    }
+    .sectionContainer {
+        height: 60%;
+    }
+    .categories {
+        display: flex;
+        flex-direction: row;
+    }
+    /*.categoriesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1 1 160px;
+    }*/
+    .categoryPhoto {
+        margin-top: 10%;
+        vertical-align: middle;
+    }
+    .categoryPhoto img {
+        width: 60px;
+        height: 60px;
+    }
+}
 
 //Desktop
 @media only screen and (min-width: 1200px) {}
