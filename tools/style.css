@@ -242,36 +242,15 @@ footer a {
   padding-bottom: 50px;
   padding-right: 15px;
   padding-left: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
 }
 
 .footerCol {
   width: 50%;
   font-weight: 250;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 160px;
-          flex: 1 1 160px;
 }
 
 .footerCol strong {
@@ -281,7 +260,7 @@ footer a {
 .footerLegalCol {
   margin-top: 50px;
   font-weight: 600;
-  line-height: 8px;
+  line-height: 12px;
 }
 
 .footerLegalCol img {
@@ -317,6 +296,33 @@ footer a {
   }
 }
 
+@media only screen and (min-width: 620px) {
+  .footerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .footerCol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .text {
     font-size: 64px;
@@ -330,22 +336,17 @@ footer a {
   .sectionContainer {
     height: 60%;
   }
-  .categories {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  .categoriesContainer {
+    max-width: 80%;
+    margin: 0 auto;
   }
-  /*.categoriesContainer {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1 1 160px;
-    }*/
+  .categories {
+    margin-top: 1em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
   .categoryPhoto {
     margin-top: 10%;
     vertical-align: middle;

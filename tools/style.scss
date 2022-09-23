@@ -194,20 +194,22 @@ footer {
     padding-bottom: 50px;
     padding-right: 15px;
     padding-left: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: flex-start;
+    //align-items: stretch;
 }
 
 .footerCol {
     width: 50%;
     font-weight: 250;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1 1 160px;
+    //display: flex;
+    //flex-wrap: wrap;
+    //flex-direction: column;
+    //flex-basis: 100%;
+    //flex: 1 1 160px;
     & strong {
         margin-top: 10%;
     }
@@ -216,7 +218,7 @@ footer {
 .footerLegalCol {
     margin-top: 50px;
     font-weight: 600;
-    line-height: 8px;
+    line-height: 12px;
 }
 
 .footerLegalCol img {
@@ -224,6 +226,7 @@ footer {
     height: 35px;
 }
 
+//Media Queries
 //bigger text and more stuff for bigger mobile devices
 @media only screen and (min-width:500px) {
     .text {
@@ -253,9 +256,28 @@ footer {
     }
 }
 
-//Media Queries
+//changes to the footer visual structure
+@media only screen and (min-width:620px) {
+    .footerContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        //display: grid;
+        //grid-template-columns: repeat(2, 3fr);
+        //grid-template-columns: repeat(1, 2fr);
+        //gap: 1em;
+    }
+    .footerCol {
+        display: flex;
+        flex-direction: column;
+        flex: 50%;
+    }
+}
+
 //Tablet (?
 @media only screen and (min-width:768px) {
+    //header
     .text {
         font-size: 64px;
     }
@@ -265,20 +287,21 @@ footer {
     .helpSearchBox {
         width: 102%;
     }
+    //main
+    //section
     .sectionContainer {
         height: 60%;
     }
-    .categories {
-        display: flex;
-        flex-direction: row;
+    //categories
+    .categoriesContainer {
+        max-width: 80%;
+        margin: 0 auto;
     }
-    /*.categoriesContainer {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1 1 160px;
-    }*/
+    .categories {
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
     .categoryPhoto {
         margin-top: 10%;
         vertical-align: middle;
