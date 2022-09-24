@@ -179,7 +179,7 @@ header {
 //footer
 footer {
     max-width: 100%;
-    padding: 1%;
+    padding: 0.5%;
     color: $white;
     background-color: $black;
     & a {
@@ -189,37 +189,35 @@ footer {
 }
 
 .footerContainer {
+    margin-top: 10%;
     font-weight: 400;
-    line-height: 24px;
-    margin-top: 5%;
+    line-height: 22px;
     padding-bottom: 50px;
     padding-right: 15px;
     padding-left: 15px;
     display: grid;
     grid-template-columns: 50% 50%;
-    //display: flex;
-    //flex-wrap: wrap;
-    //justify-content: flex-start;
-    //align-items: stretch;
+    align-items: stretch;
 }
 
 .footerCol {
-    width: 50%;
-    font-weight: 250;
-    //display: flex;
-    //flex-wrap: wrap;
-    //flex-direction: column;
-    //flex-basis: 100%;
-    //flex: 1 1 160px;
+    margin-bottom: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: stretch;
+    font-weight: 450;
     & strong {
         margin-top: 10%;
     }
 }
 
 .footerLegalCol {
-    margin-top: 50px;
-    font-weight: 600;
-    line-height: 12px;
+    margin-bottom: 10%;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 10px;
 }
 
 .footerLegalCol img {
@@ -259,20 +257,17 @@ footer {
 
 //changes to the footer visual structure
 @media only screen and (min-width:620px) {
+    footer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
     .footerContainer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        //display: grid;
-        //grid-template-columns: repeat(2, 3fr);
-        //grid-template-columns: repeat(1, 2fr);
-        //gap: 1em;
-    } /////////////////////////////////////////////////////////////////////////////////////////
-    .footerCol {
-        display: flex;
-        flex-direction: column;
-        flex: 50%;
+        margin-left: 1%;
+        max-width: 100%;
+    }
+    .footerLegalCol {
+        margin-left: 15%;
+        align-self: end;
     }
 }
 
@@ -297,6 +292,7 @@ footer {
     .categoriesContainer {
         max-width: 80%;
         margin: 0 auto;
+        margin-bottom: 5%;
     }
     .categories {
         margin-top: 1em;
@@ -310,6 +306,41 @@ footer {
     .categoryPhoto img {
         width: 60px;
         height: 60px;
+    }
+    //footer
+    footer {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .footerContainer {
+        max-width: 80%;
+        margin-top: 5%;
+        font-weight: 400;
+        line-height: 22px;
+        padding-bottom: 50px;
+        padding-right: 25px;
+        padding-left: 50px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: stretch;
+    }
+    .footerCol {
+        margin-bottom: 10%;
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: stretch;
+        font-weight: 450;
+        & strong {
+            margin-top: 10%;
+        }
+    }
+    .footerLegalCol {
+        margin-left: auto;
+        margin-right: 5%;
+        margin-bottom: 10%;
+        font-size: 19px;
+        font-weight: 450;
+        line-height: 10px;
     }
 }
 
