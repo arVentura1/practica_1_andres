@@ -107,6 +107,26 @@ header {
   outline: inherit;
 }
 
+.submitARequestButton {
+  display: none;
+  background-color: rgba(61, 61, 61, 0.5);
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+.signInButton {
+  display: none;
+  background-color: #4C5FD5;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: 1px solid #4C5FD5;
+}
+
 .sectionContainer {
   background-color: #dadbf1;
 }
@@ -477,6 +497,38 @@ footer a {
 }
 
 @media only screen and (min-width: 1200px) {
+  .headerContainer {
+    max-width: 87%;
+    margin: 0 auto;
+    padding: 1.25%;
+    font-size: 22px;
+  }
+  .searchButton,
+  .hamburgerButton {
+    display: none;
+  }
+  .extraButtons {
+    width: 375px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .submitARequestButton,
+  .signInButton {
+    display: block;
+  }
+  .categoriesContainer {
+    margin-top: 2%;
+  }
+  .searchBox {
+    font-size: 20px;
+  }
+  .innerSectionContainer {
+    height: 30vh;
+  }
   .footerContainer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;

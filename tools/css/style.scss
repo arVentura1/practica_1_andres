@@ -79,6 +79,26 @@ header {
     outline: inherit;
 }
 
+.submitARequestButton {
+    display: none;
+    background-color: rgba(61, 61, 61, 0.5);
+    color: $white;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: 1px solid $white;
+    border-radius: 8px;
+}
+
+.signInButton {
+    display: none;
+    background-color: $lightBlue;
+    color: $white;
+    font-size: 24px;
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: 1px solid $lightBlue;
+}
+
 //main
 //section
 .sectionContainer {
@@ -403,7 +423,35 @@ footer {
 //Desktop
 @media only screen and (min-width: 1200px) {
     //header
+    .headerContainer {
+        max-width: 87%;
+        margin: 0 auto;
+        padding: 1.25%;
+        font-size: 22px;
+    }
+    .searchButton,
+    .hamburgerButton {
+        display: none;
+    }
+    .extraButtons {
+        width: 375px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .submitARequestButton,
+    .signInButton {
+        display: block;
+    }
     //main
+    .categoriesContainer {
+        margin-top: 2%;
+    }
+    .searchBox {
+        font-size: 20px;
+    }
+    .innerSectionContainer {
+        height: 30vh;
+    }
     //footer
     .footerContainer {
         justify-content: space-between;
