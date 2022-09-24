@@ -87,6 +87,8 @@ header {
     padding: 10px 20px;
     border: 1px solid $white;
     border-radius: 8px;
+    font: inherit;
+    cursor: pointer;
 }
 
 .signInButton {
@@ -97,6 +99,8 @@ header {
     padding: 10px 30px;
     border-radius: 8px;
     border: 1px solid $lightBlue;
+    font: inherit;
+    cursor: pointer;
 }
 
 //main
