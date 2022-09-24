@@ -25,7 +25,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 4.5%;
+    padding: 2%;
     font-size: 22px;
 }
 
@@ -48,7 +48,7 @@ header {
 .pipeline {
     margin-left: 5px;
     margin-right: 5px;
-    font-size: larger;
+    font-size: 30px;
 }
 
 .headerHelper {
@@ -83,11 +83,11 @@ header {
 //section
 .sectionContainer {
     background-color: $lightGrey;
-    height: 30%;
 }
 
 .innerSectionContainer {
-    padding: 5%;
+    padding: 2%;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,8 +95,9 @@ header {
 
 .text {
     text-align: center;
-    padding: 5%;
+    padding: 1%;
     font-size: 24px;
+    font-weight: 500;
 }
 
 .helpSearchBox {
@@ -110,7 +111,7 @@ header {
     margin-right: auto;
     box-sizing: border-box;
     border-color: $black;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.12);
     border-width: 0.1px;
     border-radius: 3px;
     padding: 3%;
@@ -228,8 +229,14 @@ footer {
 //Media Queries
 //bigger text and more stuff for bigger mobile devices
 @media only screen and (min-width:500px) {
+    //header
+    .headerHelper {
+        font-size: 24px;
+    }
+    //main
     .text {
         font-size: 48px;
+        font-weight: 400;
     }
     .searchBox {
         font-size: 22px;
@@ -238,7 +245,10 @@ footer {
         width: 105%;
     }
     .sectionContainer {
-        height: 50%;
+        height: 45vh;
+    }
+    .innerSectionContainer {
+        height: 35vh;
     }
     .category {
         max-width: 100%;
@@ -274,24 +284,34 @@ footer {
 //Tablet (?
 @media only screen and (min-width:768px) {
     //header
-    .text {
-        font-size: 64px;
-    }
-    .searchBox {
-        font-size: 28px;
-    }
-    .helpSearchBox {
-        width: 102%;
+    .headerContainer {
+        max-width: 80%;
+        margin: 0 auto;
     }
     //main
+    .text {
+        font-size: 72px;
+    }
+    .searchBox {
+        font-size: 30px;
+    }
+    .helpSearchBox {
+        align-self: center;
+        width: 770px;
+    }
     //section
     .sectionContainer {
-        height: 60%;
+        margin-top: 0%;
+        height: 70%;
+    }
+    .innerSectionContainer {
+        height: 50vh;
     }
     //categories
     .categoriesContainer {
         max-width: 80%;
         margin: 0 auto;
+        margin-top: 5%;
         margin-bottom: 5%;
     }
     .categories {
@@ -344,5 +364,48 @@ footer {
     }
 }
 
+//new changes to the footer visual structure
+@media only screen and (min-width:992px) {
+    //header
+    //main
+    .categoryPhoto img {
+        width: 90px;
+        height: 90px;
+    }
+    //footer
+    footer {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    .footerContainer {
+        margin: 0;
+        margin-left: 2.5%;
+        padding: 2.5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .footerCol {
+        display: flex;
+        flex-direction: column;
+    }
+    .footerLegalCol {
+        margin: 0;
+        margin-bottom: 35px;
+        font-size: 18px;
+        font-weight: 450;
+        line-height: 15px;
+        align-self: end;
+    }
+}
+
 //Desktop
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    //header
+    //main
+    //footer
+    .footerContainer {
+        justify-content: space-between;
+    }
+}
