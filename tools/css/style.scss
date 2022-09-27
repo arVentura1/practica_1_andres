@@ -10,6 +10,15 @@ $black: #000000;
     trata de no usar % y vh, para usar rem y px
     ya pueda ser en padding, margin, etc etc
 
+    arreglar que los elementos se muevan conforme avance la pantalla
+    para ello, cambiar los (%/vh) con unidades estáticas (px/rem)
+
+    como por ejemplo, caja negra del header, debe ser más parecida al original
+    o por ejemplo, la caja morada, no debe moverse asi, debe ser estática y ya
+
+    también toquetear los tamaños del modo móvil, no es igual
+
+    ajustar el footer, que esté alineado con el header
 
 */
 
