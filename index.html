@@ -14,19 +14,24 @@
 
 <body>
 
-    <header>
-        <div class="headerContainer">
-            <div class="headerMark">
-                <div class="headerLogo">
-                    <img src="./tools/img/abstractLogoWhite.png" alt="abstractLogo">
+    <header class="headerContainer">
+        <div class="innerContainer">
+            <!-- top bar logo wrapper -->
+            <div class="brandWrapper">
+                <a href="" class="abstractBrand">
+                    <!--<span class="abstractBrand">-->
+                    <img src="./tools/img/abstractBrand.png" alt="abstractBrand">
+                    <!--</span>-->
+                    <!-- darle estilo con css a esto de abajo (tuberia)-->
+                    <span class="pipeline"></span>
+                    <!-- -->
+                    <!--<img src="./tools/img/abstractLogoWhite.png" alt="abstractLogo">-->
                     <!-- esta clase de textos sueltos meterlos en span -->
-                    <span>Abstract</span>
-                </div>
-                <!-- darle estilo con css a esto de abajo (tuberia)-->
-                <span class="pipeline"></span>
-                <div class="headerHelper">
-                    <a href="#">Help Center</a>
-                </div>
+                    <!--<span class="abstractBrand">Abstract</span>-->
+                    <a href="#" class="helpCenter">Help Center</a>
+                </a>
+
+
             </div>
             <div class="headerButtons">
                 <button type="button" class="searchButton">
@@ -35,10 +40,10 @@
                 <button type="button" class="hamburgerButton">
                     <i class='bx bx-menu bx-md'></i>
                 </button>
-                <div class="extraButtons">
-                    <button type="button" class="submitARequestButton">Submit a request</button>
-                    <button type="button" class="signInButton">Sign in</button>
-                </div>
+            </div>
+            <div class="extraButtons">
+                <button type="button" class="submitARequestButton">Submit a request</button>
+                <button type="button" class="signInButton">Sign in</button>
             </div>
         </div>
     </header>

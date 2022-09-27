@@ -6,6 +6,9 @@
     trata de no usar % y vh, para usar rem y px
     ya pueda ser en padding, margin, etc etc
 
+    las figuras como "|" mejor crearlas de cero con css en lugar de poner directamente el caracter
+    
+
     arreglar que los elementos se muevan conforme avance la pantalla
     para ello, cambiar los (%/vh) con unidades estáticas (px/rem)
 
@@ -21,93 +24,97 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
-header {
-  color: #fff;
-  background-color: #000000;
-}
-
 .headerContainer {
-  max-width: 100%;
+  background-color: #000000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  height: 5.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+}
+
+.innerContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2%;
+  margin: auto;
+}
+
+.brandWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*
+    & img {
+        width: 31px;
+        height: 31px;
+    }
+    */
+}
+
+.brandWrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brandWrapper .helpCenter {
   font-size: 22px;
+  font-weight: 500;
 }
 
-.headerMark {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.headerLogo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: bolder;
-}
-
-.headerLogo img {
-  width: 31px;
-  height: 31px;
-  margin-right: 10px;
+.abstractBrand img {
+  width: 8rem;
+  height: 2rem;
 }
 
 .pipeline {
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 30px;
+  border-left: 2px solid #fff;
+  height: 2rem;
+  margin: 10px;
 }
 
-.headerHelper {
-  font-size: 18px;
-  font-weight: 400;
+/*
+.helpCenter {
+    font-size: 22px;
+    font-weight: 400;
+    color: inherit;
+    text-decoration: none;
 }
-
-.headerHelper a {
-  color: inherit;
-  text-decoration: none;
-}
-
+*/
 .headerButtons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .searchButton,
 .hamburgerButton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: none;
   color: inherit;
   border: none;
-  padding: 0;
   font: inherit;
   cursor: pointer;
   outline: inherit;
@@ -368,8 +375,9 @@ footer a {
 
 @media only screen and (min-width: 768px) {
   .headerContainer {
-    max-width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .text {
     font-size: 72px;

@@ -12,6 +12,9 @@ $black: #000000;
     trata de no usar % y vh, para usar rem y px
     ya pueda ser en padding, margin, etc etc
 
+    las figuras como "|" mejor crearlas de cero con css en lugar de poner directamente el caracter
+    
+
     arreglar que los elementos se muevan conforme avance la pantalla
     para ello, cambiar los (%/vh) con unidades estáticas (px/rem)
 
@@ -29,55 +32,80 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
-header {
-    color: $white;
-    background-color: $black;
-}
-
 .headerContainer {
-    max-width: 100%;
+    background-color: $black;
+    color: $white;
+    font-weight: 700;
+    font-size: 17px;
+    height: 5.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     display: flex;
-    flex-direction: row;
+}
+
+.innerContainer {
+    width: 100%;
+    display: flex;
+    //si te quiebra mucho la cabeza, ponlo en nowrap (o quita el flex wrap directamente)
+    //flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    padding: 2%;
-    font-size: 22px;
+    margin: auto;
 }
 
-.headerMark {
+.brandWrapper {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap; //REHACER LOS BUTTONS DE LUPA Y HAMBURGUESA !!!!!!! ////////
     align-items: center;
-}
-
-.headerLogo {
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
+    & a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+    }
+    /*
     & img {
         width: 31px;
         height: 31px;
-        margin-right: 10px;
     }
+    */
+    & .helpCenter {
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+
+.abstractBrand img {
+    width: 8rem;
+    height: 2rem;
+    //background-image: url('../img/abstractBrand.png');
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    //background-position: center;
+    //object-fit: cover;
 }
 
 .pipeline {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 30px;
+    border-left: 2px solid $white;
+    height: 2rem;
+    margin: 10px;
 }
 
-.headerHelper {
-    font-size: 18px;
+
+/*
+.helpCenter {
+    font-size: 22px;
     font-weight: 400;
-    & a {
-        color: inherit;
-        text-decoration: none;
-    }
+    color: inherit;
+    text-decoration: none;
 }
+*/
 
 .headerButtons {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    //flex-direction: row;
+    //justify-content: space-between;
 }
 
 //SI TENGO TANTOS CODIGOS SEGUIDOS REPETIDOS ES PORQUE
@@ -85,12 +113,12 @@ header {
 //(como por ejemplo el tema de font, cursor y outline
 .searchButton,
 .hamburgerButton {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
     background: none;
     color: inherit;
     border: none;
-    padding: 0;
+    //padding: 0;
     font: inherit;
     cursor: pointer;
     outline: inherit;
@@ -324,8 +352,10 @@ footer {
 @media only screen and (min-width:768px) {
     //header
     .headerContainer {
-        max-width: 80%;
-        margin: 0 auto;
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        //margin: 0 auto;
     }
     //main
     .text {
