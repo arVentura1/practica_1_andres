@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abstract</title>
     <link rel="icon" href="./tools/img/abstractLogoBlack.png">
+    <link rel="stylesheet" href="./tools/css/normalize.css">
     <link rel="stylesheet" href="./tools/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -16,19 +18,22 @@
         <div class="headerContainer">
             <div class="headerMark">
                 <div class="headerLogo">
-                    <img src="./tools/img/abstractLogoWhite.png" alt="abstractLogo"> Abstract
+                    <img src="./tools/img/abstractLogoWhite.png" alt="abstractLogo">
+                    <!-- esta clase de textos sueltos meterlos en span -->
+                    <span>Abstract</span>
                 </div>
-                <span class="pipeline">|</span>
+                <!-- darle estilo con css a esto de abajo (tuberia)-->
+                <span class="pipeline"></span>
                 <div class="headerHelper">
                     <a href="#">Help Center</a>
                 </div>
             </div>
             <div class="headerButtons">
                 <button type="button" class="searchButton">
-                    <box-icon name='search-alt-2' color="white" size="md"></box-icon>
+                    <i class='bx bx-search-alt-2 bx-md'></i>
                 </button>
                 <button type="button" class="hamburgerButton">
-                    <box-icon name='menu' color="white" size="md"></box-icon>
+                    <i class='bx bx-menu bx-md'></i>
                 </button>
                 <div class="extraButtons">
                     <button type="button" class="submitARequestButton">Submit a request</button>
@@ -41,18 +46,17 @@
     <main>
         <section class="sectionContainer">
             <form class="innerSectionContainer">
-                <div class="text">
-                    How can we help?
-                </div>
+                <div class="text">How can we help?</div>
                 <div class="helpSearchBox">
                     <input type="search" class="searchBox" placeholder="Search">
                     <button type="button" class="helpSearchButton">
-                        <box-icon name='right-arrow-alt' size="md"></box-icon>
+                        <i class='bx bx-right-arrow-alt bx-md'></i>
                     </button>
                 </div>
             </form>
         </section>
-        <div class="categoriesContainer">
+        <!-- o uso sections todo, o divs todos, daniel tiene preferencia por los sections -->
+        <section class="categoriesContainer">
             <div class="categories">
                 <div class="category">
                     <div class="categoryPhoto">
@@ -115,7 +119,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
