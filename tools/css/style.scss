@@ -129,11 +129,11 @@ header {
     padding-left: 15px;
     display: flex;
     justify-content: center;
-    //align-items: center;
 }
 
 .innerSectionContainer {
-    width: 333px;
+    width: 100%;
+    //width: 333px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,17 +148,21 @@ header {
     margin-bottom: 50px;
 }
 
-
-/*.helpSearchBox {
+.searchBar {
     width: 100%;
+    max-width: 720px;
     position: relative;
     display: flex;
-    align-items: center;
-}*/
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-.searchBox {
-    max-width: 720px;
+input[type="search"] {
     width: 100%;
+    //position: relative;
+    //margin-top: 25px;
+    max-width: 720px;
     padding: 1rem 1rem;
     margin-right: auto;
     margin-left: auto;
@@ -179,10 +183,11 @@ header {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    //
-    position: relative;
-    left: 8.5rem;
-    bottom: 2.85rem;
+    //posicion flecha dentro de caja
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    width: 40px;
 }
 
 //categoriesContainer
@@ -307,15 +312,14 @@ footer {
         }
     }
     //main
+    .sectionContainer {
+        padding-bottom: 3rem;
+    }
     .text {
-        font-size: 48px;
-        font-weight: 400;
+        font-size: 4rem;
     }
     .searchBox {
         font-size: 22px;
-    }
-    .helpSearchBox {
-        width: 100%;
     }
     .sectionContainer {}
     .innerSectionContainer {}
@@ -364,10 +368,6 @@ footer {
     }
     .searchBox {
         font-size: 30px;
-    }
-    .helpSearchBox {
-        align-self: center;
-        width: 770px;
     }
     //section
     .sectionContainer {
