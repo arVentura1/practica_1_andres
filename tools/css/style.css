@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 /*
     usar en todo el normalize.css
 
@@ -22,6 +23,8 @@
 */
 body {
   font-family: 'DM Sans', sans-serif;
+  color: #191a1b;
+  line-height: 1.5;
 }
 
 header {
@@ -104,18 +107,15 @@ header {
   margin: 8px;
 }
 
-.headerButtons {
-  font: inherit;
-  cursor: pointer;
-}
-
-.headerButtons .searchButton,
-.headerButtons .hamburgerButton {
+.searchButton,
+.hamburgerButton {
   padding: 0;
   background: none;
   color: inherit;
   border: none;
   outline: inherit;
+  font: inherit;
+  cursor: pointer;
 }
 
 .extraButtons {
@@ -224,27 +224,30 @@ input[type="search"] {
 }
 
 .categoriesContainer {
-  max-width: 100%;
-  margin-top: 5%;
-  margin-bottom: 10%;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+.innerCategoriesContainer {
+  max-width: 1600px;
+  width: 100%;
+}
+
 .categories {
-  max-width: 100%;
+  margin-top: 6.25rem;
+  margin-bottom: 4rem;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .category {
   max-width: 100%;
-  margin-left: 2.5%;
+  margin-bottom: 5.5rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,27 +257,39 @@ input[type="search"] {
           flex-direction: row;
 }
 
-.categoryPhoto {
-  margin-top: 20%;
-  vertical-align: middle;
+.category .categoryPhoto {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.categoryPhoto img {
+.category .categoryPhoto img {
   width: 60px;
   height: 60px;
+  margin-right: 1rem;
 }
 
-.categoryDescription {
+.category .categoryDescription {
   font-size: 24px;
-  padding: 5%;
 }
 
-.categoryDescription .content {
-  margin-bottom: 24px;
-  line-height: 32px;
+.category .categoryDescription .title {
+  font-weight: 900;
+  line-height: 1px;
 }
 
-.categoryDescription a {
+.category .categoryDescription .content {
+  margin-top: 12px;
+  margin-bottom: 1rem;
+  line-height: 30px;
+}
+
+.category .categoryDescription a {
   font-size: 20px;
   line-height: 28px;
   text-decoration: none;
@@ -339,15 +354,6 @@ footer a {
   height: 35px;
 }
 
-/*
-@media only screen and (min-width:400px) {
-    .headerButtons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-}
-*/
 @media only screen and (min-width: 501px) {
   .abstractBrand img {
     width: 8rem;
@@ -365,19 +371,21 @@ footer a {
   .searchBox {
     font-size: 22px;
   }
-  .category {
-    max-width: 100%;
-    margin-left: 5%;
-    margin-right: 3%;
-  }
-  .categoryPhoto {
-    margin-top: 10%;
-    vertical-align: middle;
-  }
-  .categoryPhoto img {
-    width: 60px;
-    height: 60px;
-  }
+  /*
+    .category {
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 3%;
+    }
+    .categoryPhoto {
+        margin-top: 10%;
+        vertical-align: middle;
+        & img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    */
 }
 
 @media only screen and (min-width: 620px) {
@@ -417,27 +425,27 @@ footer a {
   .searchBox {
     font-size: 30px;
   }
-  .categoriesContainer {
-    max-width: 80%;
-    margin: 0 auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-  .categories {
-    margin-top: 1em;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
+  /*
+    .categoriesContainer {
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+.innerCategoriesContainer {
+        margin-top: 1em;
+        display: grid;
         grid-template-columns: 50% 50%;
-  }
-  .categoryPhoto {
-    margin-top: 10%;
-    vertical-align: middle;
-  }
-  .categoryPhoto img {
-    width: 60px;
-    height: 60px;
-  }
+    }
+    .categoryPhoto {
+        margin-top: 10%;
+        vertical-align: middle;
+        & img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    */
   footer {
     display: -ms-grid;
     display: grid;
@@ -484,10 +492,12 @@ footer a {
 }
 
 @media only screen and (min-width: 992px) {
-  .categoryPhoto img {
-    width: 90px;
-    height: 90px;
-  }
+  /*
+    .categoryPhoto img {
+        width: 90px;
+        height: 90px;
+    }
+    */
   footer {
     display: -ms-grid;
     display: grid;
@@ -553,12 +563,15 @@ footer a {
   .signInButton {
     display: block;
   }
-  .categoriesContainer {
-    margin-top: 2%;
-  }
-  .searchBox {
-    font-size: 20px;
-  }
+  /*
+    .categoriesContainer {
+        margin-top: 2%;
+    }
+    .searchBox {
+        font-size: 20px;
+    }
+    .innerSectionContainer {}
+    */
   .footerContainer {
     padding-left: 3rem;
     -webkit-box-pack: justify;
