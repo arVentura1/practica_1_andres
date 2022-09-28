@@ -86,11 +86,7 @@ header {
     }
 }
 
-/////////////////////////////////////////
-/// ARREGLAR LO DE LOS EXTRA BUTTONS PARA QUE APAREZCAN
-////////////////////////////////////////
 .headerButtons {
-    //display: block;
     font: inherit;
     cursor: pointer;
     & .searchButton,
@@ -126,11 +122,10 @@ header {
 //section
 .sectionContainer {
     background-color: $lightGrey;
+    height: 22rem;
 }
 
 .innerSectionContainer {
-    padding: 2%;
-    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,7 +133,6 @@ header {
 
 .text {
     text-align: center;
-    padding: 1%;
     font-size: 24px;
     font-weight: 500;
 }

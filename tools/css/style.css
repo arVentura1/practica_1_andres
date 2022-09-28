@@ -140,11 +140,10 @@ header {
 
 .sectionContainer {
   background-color: #dadbf1;
+  height: 22rem;
 }
 
 .innerSectionContainer {
-  padding: 2%;
-  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +158,6 @@ header {
 
 .text {
   text-align: center;
-  padding: 1%;
   font-size: 24px;
   font-weight: 500;
 }
