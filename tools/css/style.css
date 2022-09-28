@@ -140,10 +140,21 @@ header {
 
 .sectionContainer {
   background-color: #dadbf1;
-  height: 22rem;
+  height: 18rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .innerSectionContainer {
+  width: 333px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,36 +165,43 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .text {
   text-align: center;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -4px;
+  margin-bottom: 50px;
 }
 
-.helpSearchBox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-}
-
+/*.helpSearchBox {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}*/
 .searchBox {
+  max-width: 720px;
   width: 100%;
-  margin-left: 20px;
+  padding: 1rem 1rem;
   margin-right: auto;
+  margin-left: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.1);
   border-color: #000000;
-  -webkit-box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.12);
   border-width: 0.1px;
-  border-radius: 3px;
-  padding: 3%;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 32px;
 }
 
-.helpSearchButton {
+.arrowSearchBox {
   background: none;
   color: inherit;
   border: 0;
@@ -192,8 +210,8 @@ header {
   cursor: pointer;
   outline: inherit;
   position: relative;
-  right: 2.5em;
-  top: 2.5px;
+  left: 8.5rem;
+  bottom: 2.85rem;
 }
 
 .categoriesContainer {
@@ -339,12 +357,6 @@ footer a {
   .helpSearchBox {
     width: 100%;
   }
-  .sectionContainer {
-    height: 45vh;
-  }
-  .innerSectionContainer {
-    height: 35vh;
-  }
   .category {
     max-width: 100%;
     margin-left: 5%;
@@ -401,7 +413,6 @@ footer a {
         height: 70%;
     }
     .innerSectionContainer {
-        height: 50vh;
     }
     //categories
     .categoriesContainer {
@@ -535,9 +546,6 @@ footer a {
   }
   .searchBox {
     font-size: 20px;
-  }
-  .innerSectionContainer {
-    height: 30vh;
   }
   .footerContainer {
     padding-left: 3rem;

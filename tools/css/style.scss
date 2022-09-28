@@ -122,39 +122,56 @@ header {
 //section
 .sectionContainer {
     background-color: $lightGrey;
-    height: 22rem;
+    height: 18rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
 }
 
 .innerSectionContainer {
+    width: 333px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .text {
     text-align: center;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -4px;
+    margin-bottom: 50px;
 }
 
-.helpSearchBox {
-    display: inline-flex;
+
+/*.helpSearchBox {
     width: 100%;
-}
+    position: relative;
+    display: flex;
+    align-items: center;
+}*/
 
 .searchBox {
+    max-width: 720px;
     width: 100%;
-    margin-left: 20px;
+    padding: 1rem 1rem;
     margin-right: auto;
+    margin-left: auto;
     box-sizing: border-box;
+    box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.1);
     border-color: $black;
-    box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.12);
     border-width: 0.1px;
-    border-radius: 3px;
-    padding: 3%;
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 32px;
 }
 
-.helpSearchButton {
+.arrowSearchBox {
     background: none;
     color: inherit;
     border: 0;
@@ -162,9 +179,10 @@ header {
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    //
     position: relative;
-    right: 2.5em;
-    top: 2.5px;
+    left: 8.5rem;
+    bottom: 2.85rem;
 }
 
 //categoriesContainer
@@ -299,12 +317,8 @@ footer {
     .helpSearchBox {
         width: 100%;
     }
-    .sectionContainer {
-        height: 45vh;
-    }
-    .innerSectionContainer {
-        height: 35vh;
-    }
+    .sectionContainer {}
+    .innerSectionContainer {}
     .category {
         max-width: 100%;
         margin-left: 5%;
@@ -361,7 +375,6 @@ footer {
         height: 70%;
     }
     .innerSectionContainer {
-        height: 50vh;
     }
     //categories
     .categoriesContainer {
@@ -483,9 +496,7 @@ footer {
     .searchBox {
         font-size: 20px;
     }
-    .innerSectionContainer {
-        height: 30vh;
-    }
+    .innerSectionContainer {}
     //footer
     .footerContainer {
         padding-left: 3rem;
