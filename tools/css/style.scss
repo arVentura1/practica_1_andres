@@ -32,120 +32,94 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
+header {
+    background-color: $black;
+    color: $white;
+    display: flex;
+}
+
 .headerContainer {
     background-color: $black;
     color: $white;
+    display: flex;
     font-weight: 700;
     font-size: 17px;
     height: 5.5rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .innerContainer {
     width: 100%;
     display: flex;
-    //si te quiebra mucho la cabeza, ponlo en nowrap (o quita el flex wrap directamente)
-    //flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: auto;
 }
 
 .brandWrapper {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap; //REHACER LOS BUTTONS DE LUPA Y HAMBURGUESA !!!!!!! ////////
     align-items: center;
     & a {
-        display: flex;
         align-items: center;
         text-decoration: none;
         color: inherit;
     }
-    /*
-    & img {
-        width: 31px;
-        height: 31px;
-    }
-    */
     & .helpCenter {
         font-size: 22px;
         font-weight: 500;
     }
 }
 
-.abstractBrand img {
-    width: 8rem;
-    height: 2rem;
-    //background-image: url('../img/abstractBrand.png');
-    //background-repeat: no-repeat;
-    //background-size: cover;
-    //background-position: center;
-    //object-fit: cover;
-}
-
-.pipeline {
-    border-left: 2px solid $white;
-    height: 2rem;
-    margin: 10px;
-}
-
-
-/*
-.helpCenter {
-    font-size: 22px;
-    font-weight: 400;
-    color: inherit;
-    text-decoration: none;
-}
-*/
-
-.headerButtons {
+.abstractBrand {
     display: flex;
-    //flex-direction: row;
-    //justify-content: space-between;
+    align-items: center;
+    & img {
+        width: 8rem;
+        height: 2rem;
+    }
+    & .pipeline {
+        border-left: 2px solid $white;
+        height: 2rem;
+        margin: 8px;
+    }
 }
 
-//SI TENGO TANTOS CODIGOS SEGUIDOS REPETIDOS ES PORQUE
-//GENERALMENTE DEBERIAN SER AGRUPADOS EN UN ELEMENTO MAYOR
-//(como por ejemplo el tema de font, cursor y outline
-.searchButton,
-.hamburgerButton {
-    //display: flex;
-    //align-items: center;
-    background: none;
-    color: inherit;
-    border: none;
-    //padding: 0;
+/////////////////////////////////////////
+/// ARREGLAR LO DE LOS EXTRA BUTTONS PARA QUE APAREZCAN
+////////////////////////////////////////
+.headerButtons {
+    //display: block;
     font: inherit;
     cursor: pointer;
-    outline: inherit;
+    & .searchButton,
+    & .hamburgerButton {
+        padding: 0;
+        background: none;
+        color: inherit;
+        border: none;
+        outline: inherit;
+    }
 }
 
-.submitARequestButton {
+.extraButtons {
     display: none;
-    background-color: rgba(61, 61, 61, 0.5);
-    color: $white;
     font-size: 24px;
-    padding: 10px 20px;
-    border: 1px solid $white;
-    border-radius: 8px;
-    font: inherit;
-    cursor: pointer;
-}
-
-.signInButton {
-    display: none;
-    background-color: $lightBlue;
-    color: $white;
-    font-size: 24px;
-    padding: 10px 30px;
-    border-radius: 8px;
-    border: 1px solid $lightBlue;
-    font: inherit;
-    cursor: pointer;
+    & .submitARequestButton {
+        color: $white;
+        background-color: #191a1b;
+        padding: 10px 20px;
+        border: 1px solid $white;
+        border-radius: 8px;
+    }
+    & .signInButton {
+        color: $white;
+        background-color: $lightBlue;
+        padding: 10px 30px;
+        border: 1px solid $lightBlue;
+        border-radius: 8px;
+    }
 }
 
 //main
@@ -294,12 +268,31 @@ footer {
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
 //Media Queries
+
+/*
+@media only screen and (min-width:400px) {
+    .headerButtons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+*/
+
 //bigger text and more stuff for bigger mobile devices
 @media only screen and (min-width:500px) {
     //header
-    .headerHelper {
-        font-size: 24px;
+    .abstractBrand {
+        & img {
+            width: 9.5rem;
+            height: 2.25rem;
+        }
+        & .helpCenter {
+            font-size: 42px;
+        }
     }
     //main
     .text {
@@ -337,7 +330,7 @@ footer {
 @media only screen and (min-width:620px) {
     footer {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
     }
     .footerContainer {
         max-width: 100%;
@@ -352,11 +345,11 @@ footer {
 @media only screen and (min-width:768px) {
     //header
     .headerContainer {
-        width: 100%;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
         //margin: 0 auto;
     }
+    /*
     //main
     .text {
         font-size: 72px;
@@ -431,6 +424,7 @@ footer {
         font-weight: 450;
         line-height: 10px;
     }
+    */
 }
 
 //new changes to the footer visual structure
@@ -472,19 +466,16 @@ footer {
 //Desktop
 @media only screen and (min-width: 1200px) {
     //header
-    .headerContainer {
-        max-width: 87%;
-        margin: 0 auto;
-        padding: 1.25%;
-        font-size: 22px;
+    .innerContainer {
+        width: 95%;
     }
     .searchButton,
     .hamburgerButton {
         display: none;
     }
     .extraButtons {
-        width: 375px;
         display: flex;
+        width: 24rem;
         justify-content: space-between;
     }
     .submitARequestButton,
