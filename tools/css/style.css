@@ -47,6 +47,7 @@ header {
 
 .innerContainer {
   width: 100%;
+  max-width: 1900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,8 +141,8 @@ header {
 
 .sectionContainer {
   background-color: #dadbf1;
-  height: 18rem;
-  padding-top: 2rem;
+  height: 20rem;
+  padding-top: 0.5rem;
   padding-bottom: 2rem;
   padding-right: 15px;
   padding-left: 15px;
@@ -347,10 +348,10 @@ footer a {
     }
 }
 */
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 501px) {
   .abstractBrand img {
-    width: 9.5rem;
-    height: 2.25rem;
+    width: 8rem;
+    height: 2rem;
   }
   .abstractBrand .helpCenter {
     font-size: 42px;
@@ -358,7 +359,7 @@ footer a {
   .sectionContainer {
     padding-bottom: 3rem;
   }
-  .text {
+  .innerSectionContainer .text {
     font-size: 4rem;
   }
   .searchBox {
@@ -402,77 +403,84 @@ footer a {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
   }
-  /*
-    //main
-    .text {
-        font-size: 72px;
-    }
-    .searchBox {
-        font-size: 30px;
-    }
-    //section
-    .sectionContainer {
-        margin-top: 0%;
-        height: 70%;
-    }
-    .innerSectionContainer {
-    }
-    //categories
-    .categoriesContainer {
-        max-width: 80%;
-        margin: 0 auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-    .categories {
-        margin-top: 1em;
-        display: grid;
+  .sectionContainer {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .innerSectionContainer {
+    width: 90%;
+  }
+  .innerSectionContainer .text {
+    font-size: 80px;
+    margin-bottom: 35px;
+  }
+  .searchBox {
+    font-size: 30px;
+  }
+  .categoriesContainer {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .categories {
+    margin-top: 1em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-    }
-    .categoryPhoto {
-        margin-top: 10%;
-        vertical-align: middle;
-        & img {
-            width: 60px;
-            height: 60px;
-        }
-    }
-    //footer
-    footer {
-        display: grid;
+  }
+  .categoryPhoto {
+    margin-top: 10%;
+    vertical-align: middle;
+  }
+  .categoryPhoto img {
+    width: 60px;
+    height: 60px;
+  }
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    }
-    .footerContainer {
-        //max-width: 80%;
-        margin-top: 5%;
-        font-weight: 400;
-        line-height: 22px;
-        padding-bottom: 50px;
-        padding-right: 25px;
-        padding-left: 50px;
-        display: grid;
+  }
+  .footerContainer {
+    margin-top: 5%;
+    font-weight: 400;
+    line-height: 22px;
+    padding-bottom: 50px;
+    padding-right: 25px;
+    padding-left: 50px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-        align-items: stretch;
-    }
-    .footerCol {
-        margin-bottom: 10%;
-        display: grid;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .footerCol {
+    margin-bottom: 10%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-        align-items: stretch;
-        font-weight: 450;
-        & strong {
-            margin-top: 10%;
-        }
-    }
-    .footerLegalCol {
-        margin-left: auto;
-        margin-right: 5%;
-        margin-bottom: 10%;
-        font-size: 19px;
-        font-weight: 450;
-        line-height: 10px;
-    }
-    */
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    font-weight: 450;
+  }
+  .footerCol strong {
+    margin-top: 10%;
+  }
+  .footerLegalCol {
+    margin-left: auto;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    font-size: 19px;
+    font-weight: 450;
+    line-height: 10px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -524,8 +532,9 @@ footer a {
 }
 
 @media only screen and (min-width: 1200px) {
-  .innerContainer {
-    width: 95%;
+  .headerContainer {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
   }
   .searchButton,
   .hamburgerButton {
