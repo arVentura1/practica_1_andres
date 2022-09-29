@@ -270,7 +270,7 @@ input[type="search"] {
 .category .categoryPhoto img {
   width: 63px;
   height: 63px;
-  margin-right: 1rem;
+  margin-right: 30px;
 }
 
 .category .categoryDescription {
@@ -353,6 +353,17 @@ footer a {
   height: 35px;
 }
 
+@media only screen and (min-width: 480px) {
+  .innerCategoriesContainer {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .categoryPhoto img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 @media only screen and (min-width: 501px) {
   .abstractBrand img {
     width: 8rem;
@@ -370,21 +381,6 @@ footer a {
   .searchBox {
     font-size: 22px;
   }
-  /*
-    .category {
-        max-width: 100%;
-        margin-left: 5%;
-        margin-right: 3%;
-    }
-    .categoryPhoto {
-        margin-top: 10%;
-        vertical-align: middle;
-        & img {
-            width: 60px;
-            height: 60px;
-        }
-    }
-    */
 }
 
 @media only screen and (min-width: 620px) {
@@ -405,7 +401,7 @@ footer a {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .headerContainer {
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -424,27 +420,21 @@ footer a {
   .searchBox {
     font-size: 30px;
   }
-  /*
-    .categoriesContainer {
-        max-width: 80%;
-        margin: 0 auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-.innerCategoriesContainer {
-        margin-top: 1em;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-    .categoryPhoto {
-        margin-top: 10%;
-        vertical-align: middle;
-        & img {
-            width: 60px;
-            height: 60px;
-        }
-    }
-    */
+  .categoriesContainer {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .categories {
+    margin-top: 11rem;
+    display: -ms-grid;
+    display: grid;
+    gap: 11px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .category {
+    margin-right: 20px;
+  }
   footer {
     display: -ms-grid;
     display: grid;
@@ -491,12 +481,6 @@ footer a {
 }
 
 @media only screen and (min-width: 992px) {
-  /*
-    .categoryPhoto img {
-        width: 90px;
-        height: 90px;
-    }
-    */
   footer {
     display: -ms-grid;
     display: grid;
