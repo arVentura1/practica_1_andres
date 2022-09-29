@@ -5,29 +5,6 @@ $white: #fff;
 $black: #000000;
 //Fonts (DM Sans regular & DM Serif Display regular e italic)
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-
-/*
-    usar en todo el normalize.css
-
-    trata de no usar % y vh, para usar rem y px
-    ya pueda ser en padding, margin, etc etc
-
-    las figuras como "|" mejor crearlas de cero con css en lugar de poner directamente el caracter
-    
-
-    arreglar que los elementos se muevan conforme avance la pantalla
-    para ello, cambiar los (%/vh) con unidades estáticas (px/rem)
-
-    como por ejemplo, caja negra del header, debe ser más parecida al original
-    o por ejemplo, la caja morada, no debe moverse asi, debe ser estática y ya
-
-    también toquetear los tamaños del modo móvil, no es igual
-
-    ajustar el footer, que esté alineado con el header
-
-*/
-
 //Mobile First
 body {
     font-family: 'DM Sans', sans-serif;
@@ -50,23 +27,21 @@ header {
     height: 5.5rem;
     padding-right: 15px;
     padding-left: 15px;
-}
-
-.innerContainer {
-    width: 100%;
-    max-width: 1900px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
+    & .innerContainer {
+        width: 100%;
+        max-width: 1900px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+    }
 }
 
 .brandWrapper {
     display: flex;
     align-items: center;
     & a {
-        align-items: center;
         text-decoration: none;
         color: inherit;
     }
@@ -138,14 +113,13 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.text {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: -4px;
-    margin-bottom: 35px;
+    & .text {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: -4px;
+        margin-bottom: 35px;
+    }
 }
 
 .searchBar {
@@ -156,6 +130,20 @@ header {
     flex-wrap: wrap;
     margin-right: auto;
     margin-left: auto;
+    & .arrowSearchBox {
+        background: none;
+        color: inherit;
+        border: 0;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        //searchBox arrow position
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        width: 40px;
+    }
 }
 
 input[type="search"] {
@@ -171,21 +159,6 @@ input[type="search"] {
     border-radius: 4px;
     font-size: 20px;
     line-height: 32px;
-}
-
-.arrowSearchBox {
-    background: none;
-    color: inherit;
-    border: 0;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    //searchBox arrow position
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
-    width: 40px;
 }
 
 //categoriesContainer
@@ -265,10 +238,7 @@ footer {
 }
 
 .footerContainer {
-    //position: relative;
-    //margin: 0 auto;
     width: 100%;
-    //max-width: 1900px;
     font-weight: 400;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -428,6 +398,13 @@ footer {
         grid-template-columns: 1fr 1fr;
         align-items: baseline;
     }
+    .footerLegalCol {
+        margin-left: auto;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        font-size: 19px;
+        font-weight: 450;
+    }
     .footerCol {
         display: grid;
         grid-template-columns: 100%;
@@ -436,13 +413,6 @@ footer {
         & strong {
             margin-top: 2.5rem;
         }
-    }
-    .footerLegalCol {
-        margin-left: auto;
-        margin-right: 1rem;
-        margin-top: 1rem;
-        font-size: 19px;
-        font-weight: 450;
     }
 }
 
