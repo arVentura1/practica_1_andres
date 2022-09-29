@@ -310,11 +310,12 @@ footer a {
   text-decoration: none;
 }
 
-.footerContainer {
-  position: relative;
-  width: 100%;
+.innerFooter {
   max-width: 1900px;
-  margin: 0 auto;
+}
+
+.footerContainer {
+  width: 100%;
   font-weight: 400;
   display: -ms-grid;
   display: grid;
@@ -406,14 +407,20 @@ footer a {
 }
 
 @media only screen and (min-width: 621px) {
-  footer {
+  .innerFooter {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .footerContainer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
   .footerLegalCol {
-    margin-left: 3.5rem;
+    margin-left: 2.2rem;
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
@@ -461,6 +468,8 @@ footer a {
   footer {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .innerFooter {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -502,33 +511,30 @@ footer a {
 }
 
 @media only screen and (min-width: 992px) {
-  /*
-    footer {
-        display: grid;
-        grid-template-columns: 80% 20%;
-    }
-    .footerContainer {
-        margin: 0;
-        margin-left: 2.5%;
-        padding: 2.5%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .footerCol {
-        display: flex;
-        flex-direction: column;
-    }
-    .footerLegalCol {
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 0.4fr;
+        grid-template-columns: 1fr 0.4fr;
+  }
+  .footerContainer {
+    margin-left: 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footerCol {
+    width: 20.5%;
+  }
+  /*.footerLegalCol {
+       
         margin: 0;
         margin-bottom: 35px;
         font-size: 18px;
         font-weight: 450;
         line-height: 15px;
         align-self: end;
-    }
-    */
+    }        */
 }
 
 @media only screen and (min-width: 1200px) {
@@ -557,11 +563,11 @@ footer a {
     width: 90px;
     height: 90px;
   }
-  /*
-    .footerContainer {
-        padding-left: 3rem;
-        justify-content: space-between;
-    }
-    */
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 0.4fr;
+        grid-template-columns: 1fr 0.4fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

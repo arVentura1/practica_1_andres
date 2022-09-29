@@ -258,11 +258,17 @@ footer {
     }
 }
 
-.footerContainer {
-    position: relative;
-    width: 100%;
+.innerFooter {
+    //display: grid;
+    //grid-template-columns: 1fr;
     max-width: 1900px;
-    margin: 0 auto;
+}
+
+.footerContainer {
+    //position: relative;
+    //margin: 0 auto;
+    width: 100%;
+    //max-width: 1900px;
     font-weight: 400;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -349,12 +355,16 @@ footer {
 
 //Changes to the footer visual structure
 @media only screen and (min-width:621px) {
-    footer {
+    .innerFooter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footerContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     .footerLegalCol {
-        margin-left: 3.5rem;
+        margin-left: 2.2rem;
         align-self: end;
     }
 }
@@ -404,6 +414,8 @@ footer {
     footer {
         padding-left: 30px;
         padding-right: 30px;
+    }
+    .innerFooter {
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -437,33 +449,26 @@ footer {
 //New changes to the footer visual structure
 @media only screen and (min-width:992px) {
     //footer
-    /*
     footer {
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 1fr 0.4fr;
     }
     .footerContainer {
-        margin: 0;
-        margin-left: 2.5%;
-        padding: 2.5%;
+        margin-left: 1.8rem;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
     }
     .footerCol {
-        display: flex;
-        flex-direction: column;
+        width: 20.5%;
     }
-    .footerLegalCol {
+    /*.footerLegalCol {
+       
         margin: 0;
         margin-bottom: 35px;
         font-size: 18px;
         font-weight: 450;
         line-height: 15px;
         align-self: end;
-    }
-    */
+    }        */
 }
 
 //Desktop
@@ -494,10 +499,12 @@ footer {
         }
     }
     //footer
-    /*
-    .footerContainer {
-        padding-left: 3rem;
-        justify-content: space-between;
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 0.4fr;
     }
-    */
+    .footerContainer {
+        //padding-left: 3rem;
+        //justify-content: space-between;
+    }
 }
