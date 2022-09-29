@@ -358,7 +358,7 @@ footer a {
     width: 85%;
     margin: 0 auto;
   }
-  .categoryPhoto img {
+  .category .categoryPhoto img {
     width: 70px;
     height: 70px;
   }
@@ -434,6 +434,10 @@ footer a {
   }
   .category {
     margin-right: 20px;
+  }
+  .category .categoryPhoto img {
+    width: 80px;
+    height: 80px;
   }
   footer {
     display: -ms-grid;
@@ -546,15 +550,10 @@ footer a {
   .signInButton {
     display: block;
   }
-  /*
-    .categoriesContainer {
-        margin-top: 2%;
-    }
-    .searchBox {
-        font-size: 20px;
-    }
-    .innerSectionContainer {}
-    */
+  .category .categoryPhoto img {
+    width: 90px;
+    height: 90px;
+  }
   .footerContainer {
     padding-left: 3rem;
     -webkit-box-pack: justify;
