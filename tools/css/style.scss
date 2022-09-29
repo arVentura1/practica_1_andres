@@ -125,7 +125,6 @@ header {
 .sectionContainer {
     background-color: $lightGrey;
     height: 20rem;
-    padding-top: 0.5rem;
     padding-bottom: 2rem;
     padding-right: 15px;
     padding-left: 15px;
@@ -146,7 +145,7 @@ header {
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: -4px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 .searchBar {
@@ -201,8 +200,8 @@ input[type="search"] {
 }
 
 .categories {
-    margin-top: 6.25rem;
-    margin-bottom: 4rem;
+    margin-top: 6.5rem;
+    margin-bottom: 2.5rem;
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -219,8 +218,8 @@ input[type="search"] {
         display: flex;
         flex-direction: column;
         & img {
-            width: 60px;
-            height: 60px;
+            width: 63px;
+            height: 63px;
             margin-right: 1rem;
         }
     }
