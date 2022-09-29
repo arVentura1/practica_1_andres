@@ -311,7 +311,9 @@ footer a {
 }
 
 .innerFooter {
+  width: 100%;
   max-width: 1900px;
+  margin: 0 auto;
 }
 
 .footerContainer {
@@ -514,8 +516,14 @@ footer a {
   footer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 0.4fr;
-        grid-template-columns: 1fr 0.4fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .innerFooter {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 0.5fr;
+        grid-template-columns: 1fr 0.5fr;
   }
   .footerContainer {
     margin-left: 1.8rem;
@@ -523,18 +531,16 @@ footer a {
     display: -ms-flexbox;
     display: flex;
   }
-  .footerCol {
+  .footerContainer .footerCol {
     width: 20.5%;
   }
-  /*.footerLegalCol {
-       
-        margin: 0;
-        margin-bottom: 35px;
-        font-size: 18px;
-        font-weight: 450;
-        line-height: 15px;
-        align-self: end;
-    }        */
+  .footerLegalCol {
+    font-weight: 450;
+    margin-left: auto;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -562,12 +568,6 @@ footer a {
   .category .categoryPhoto img {
     width: 90px;
     height: 90px;
-  }
-  footer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 0.4fr;
-        grid-template-columns: 1fr 0.4fr;
   }
 }
 /*# sourceMappingURL=style.css.map */
