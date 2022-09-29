@@ -452,6 +452,7 @@ footer {
     footer {
         display: grid;
         grid-template-columns: 1fr;
+        height: 21rem;
     }
     .innerFooter {
         display: grid;
@@ -498,5 +499,13 @@ footer {
             height: 90px;
         }
     }
+}
+
+//Desktop footer extra space between footer content
+@media only screen and (min-width: 1441px) {
     //footer
+    .footerContainer {
+        display: flex;
+        justify-content: space-between;
+    }
 }

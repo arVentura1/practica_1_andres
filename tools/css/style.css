@@ -518,6 +518,7 @@ footer a {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    height: 21rem;
   }
   .innerFooter {
     display: -ms-grid;
@@ -568,6 +569,17 @@ footer a {
   .category .categoryPhoto img {
     width: 90px;
     height: 90px;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  .footerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=style.css.map */
