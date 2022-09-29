@@ -296,10 +296,13 @@ input[type="search"] {
 }
 
 footer {
+  position: relative;
   max-width: 100%;
-  padding: 0.5%;
-  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 4rem;
   background-color: #000000;
+  color: #fff;
 }
 
 footer a {
@@ -308,49 +311,68 @@ footer a {
 }
 
 .footerContainer {
-  margin-top: 10%;
+  position: relative;
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
   font-weight: 400;
-  line-height: 22px;
-  padding-bottom: 50px;
-  padding-right: 15px;
-  padding-left: 15px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .footerCol {
-  margin-bottom: 10%;
+  margin-bottom: 2rem;
+  margin-top: 1.3rem;
+  font-weight: 450;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  font-weight: 450;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.footerCol h2 {
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+
+.footerCol a {
+  font-weight: 200;
+  line-height: 1.5rem;
 }
 
 .footerCol strong {
-  margin-top: 10%;
+  font-weight: 900;
+  margin-top: 1.5rem;
 }
 
 .footerLegalCol {
-  margin-bottom: 10%;
-  padding-right: 15px;
-  padding-left: 15px;
-  font-size: 18px;
-  font-weight: 450;
-  line-height: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.75rem;
 }
 
 .footerLegalCol img {
+  margin-bottom: 0.5rem;
   width: 35px;
   height: 35px;
+}
+
+.footerLegalCol .legalText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media only screen and (min-width: 480px) {
@@ -384,21 +406,19 @@ footer a {
 }
 
 @media only screen and (min-width: 620px) {
-  footer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
+  /*
+    footer {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-  }
-  .footerContainer {
-    max-width: 100%;
-  }
-  .footerLegalCol {
-    margin-left: 15%;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
+    }
+    .footerContainer {
+        max-width: 100%;
+    }
+    .footerLegalCol {
+        margin-left: 15%;
         align-self: end;
-  }
+    }
+    */
 }
 
 @media only screen and (min-width: 769px) {
@@ -439,93 +459,72 @@ footer a {
     width: 80px;
     height: 80px;
   }
-  footer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100%;
+  /*
+    footer {
+        display: grid;
         grid-template-columns: 100%;
-  }
-  .footerContainer {
-    margin-top: 5%;
-    font-weight: 400;
-    line-height: 22px;
-    padding-bottom: 50px;
-    padding-right: 25px;
-    padding-left: 50px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
+    }
+    .footerContainer {
+        //max-width: 80%;
+        margin-top: 5%;
+        font-weight: 400;
+        line-height: 22px;
+        padding-bottom: 50px;
+        padding-right: 25px;
+        padding-left: 50px;
+        display: grid;
         grid-template-columns: 50% 50%;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-  }
-  .footerCol {
-    margin-bottom: 10%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100%;
+        align-items: stretch;
+    }
+    .footerCol {
+        margin-bottom: 10%;
+        display: grid;
         grid-template-columns: 100%;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    font-weight: 450;
-  }
-  .footerCol strong {
-    margin-top: 10%;
-  }
-  .footerLegalCol {
-    margin-left: auto;
-    margin-right: 5%;
-    margin-bottom: 10%;
-    font-size: 19px;
-    font-weight: 450;
-    line-height: 10px;
-  }
+        align-items: stretch;
+        font-weight: 450;
+        & strong {
+            margin-top: 10%;
+        }
+    }
+    .footerLegalCol {
+        margin-left: auto;
+        margin-right: 5%;
+        margin-bottom: 10%;
+        font-size: 19px;
+        font-weight: 450;
+        line-height: 10px;
+    }
+    */
 }
 
 @media only screen and (min-width: 992px) {
-  footer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 80% 20%;
+  /*
+    footer {
+        display: grid;
         grid-template-columns: 80% 20%;
-  }
-  .footerContainer {
-    margin: 0;
-    margin-left: 2.5%;
-    padding: 2.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
+    }
+    .footerContainer {
+        margin: 0;
+        margin-left: 2.5%;
+        padding: 2.5%;
+        display: flex;
+        flex-direction: row;
         justify-content: space-around;
-    -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .footerCol {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .footerLegalCol {
-    margin: 0;
-    margin-bottom: 35px;
-    font-size: 18px;
-    font-weight: 450;
-    line-height: 15px;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
+    }
+    .footerCol {
+        display: flex;
+        flex-direction: column;
+    }
+    .footerLegalCol {
+        margin: 0;
+        margin-bottom: 35px;
+        font-size: 18px;
+        font-weight: 450;
+        line-height: 15px;
         align-self: end;
-  }
+    }
+    */
 }
 
 @media only screen and (min-width: 1200px) {
@@ -554,11 +553,11 @@ footer a {
     width: 90px;
     height: 90px;
   }
-  .footerContainer {
-    padding-left: 3rem;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+  /*
+    .footerContainer {
+        padding-left: 3rem;
+        justify-content: space-between;
+    }
+    */
 }
 /*# sourceMappingURL=style.css.map */

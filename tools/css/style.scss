@@ -181,7 +181,7 @@ input[type="search"] {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-    //posicion flecha dentro de caja
+    //searchBox arrow position
     position: absolute;
     right: 10px;
     bottom: 20px;
@@ -223,9 +223,6 @@ input[type="search"] {
             margin-right: 30px;
         }
     }
-    ////////////////////////////////////////
-    /// vas por aqui chaval
-    /////////////////////////////////////
     & .categoryDescription {
         font-size: 24px;
         & .title {
@@ -248,10 +245,13 @@ input[type="search"] {
 
 //footer
 footer {
+    position: relative;
     max-width: 100%;
-    padding: 0.5%;
-    color: $white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 4rem;
     background-color: $black;
+    color: $white;
     & a {
         color: $white;
         text-decoration: none;
@@ -259,43 +259,54 @@ footer {
 }
 
 .footerContainer {
-    margin-top: 10%;
+    position: relative;
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
     font-weight: 400;
-    line-height: 22px;
-    padding-bottom: 50px;
-    padding-right: 15px;
-    padding-left: 15px;
     display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: stretch;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
 }
 
 .footerCol {
-    margin-bottom: 10%;
-    display: grid;
-    grid-template-columns: 100%;
-    align-items: stretch;
+    margin-bottom: 2rem;
+    margin-top: 1.3rem;
     font-weight: 450;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: baseline;
+    & h2 {
+        margin-bottom: 15px;
+        font-weight: 900;
+    }
+    & a {
+        font-weight: 200;
+        line-height: 1.5rem;
+    }
     & strong {
-        margin-top: 10%;
+        font-weight: 900;
+        margin-top: 1.5rem;
     }
 }
 
 .footerLegalCol {
-    margin-bottom: 10%;
-    padding-right: 15px;
-    padding-left: 15px;
-    font-size: 18px;
-    font-weight: 450;
-    line-height: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.75rem;
     & img {
+        margin-bottom: 0.5rem;
         width: 35px;
         height: 35px;
+    }
+    & .legalText {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 //Media Queries
-//margin 0 auto for innerCategoriesContainer
+//Margin for innerCategoriesContainer
 @media only screen and (min-width: 480px) {
     .innerCategoriesContainer {
         width: 85%;
@@ -309,7 +320,7 @@ footer {
     }
 }
 
-//bigger text and more stuff for bigger mobile devices
+//Bigger text and more stuff for bigger mobile devices
 @media only screen and (min-width:501px) {
     //header
     .abstractBrand {
@@ -334,11 +345,11 @@ footer {
     .searchBox {
         font-size: 22px;
     }
-    //categories
 }
 
-//changes to the footer visual structure
+//Changes to the footer visual structure
 @media only screen and (min-width:620px) {
+    /*
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -350,9 +361,10 @@ footer {
         margin-left: 15%;
         align-self: end;
     }
+    */
 }
 
-//Tablet (?
+//Tablet resolution
 @media only screen and (min-width:769px) {
     //header
     .headerContainer {
@@ -394,6 +406,7 @@ footer {
         }
     }
     //footer
+    /*
     footer {
         display: grid;
         grid-template-columns: 100%;
@@ -428,13 +441,13 @@ footer {
         font-weight: 450;
         line-height: 10px;
     }
+    */
 }
 
-//new changes to the footer visual structure
+//New changes to the footer visual structure
 @media only screen and (min-width:992px) {
-    //header
-    //main
     //footer
+    /*
     footer {
         display: grid;
         grid-template-columns: 80% 20%;
@@ -460,6 +473,7 @@ footer {
         line-height: 15px;
         align-self: end;
     }
+    */
 }
 
 //Desktop
@@ -490,8 +504,10 @@ footer {
         }
     }
     //footer
+    /*
     .footerContainer {
         padding-left: 3rem;
         justify-content: space-between;
     }
+    */
 }
