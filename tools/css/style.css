@@ -405,20 +405,19 @@ footer a {
   }
 }
 
-@media only screen and (min-width: 620px) {
-  /*
-    footer {
-        display: grid;
+@media only screen and (min-width: 621px) {
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    }
-    .footerContainer {
-        max-width: 100%;
-    }
-    .footerLegalCol {
-        margin-left: 15%;
+  }
+  .footerLegalCol {
+    margin-left: 4rem;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
         align-self: end;
-    }
-    */
+  }
 }
 
 @media only screen and (min-width: 769px) {

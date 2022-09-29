@@ -348,20 +348,15 @@ footer {
 }
 
 //Changes to the footer visual structure
-@media only screen and (min-width:620px) {
-    /*
+@media only screen and (min-width:621px) {
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .footerContainer {
-        max-width: 100%;
-    }
     .footerLegalCol {
-        margin-left: 15%;
+        margin-left: 4rem;
         align-self: end;
     }
-    */
 }
 
 //Tablet resolution
